@@ -1,2 +1,2 @@
 # js_entrance
-js入門際して資料
+js入門
