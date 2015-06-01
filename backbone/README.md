@@ -28,10 +28,10 @@ http://dotinstall.com/lessons/basic_underscorejs
 modelの状態に変化が起こったときにイベントを発火する。
   
 ### viewとは  
-modelのインスタンスを持つ。  
-modelのインスタンスのイベントを監視する。
-UIを描画する。 　
-ユーザのアクションを受け取り、イベントを発火する。
+modelのインスタンスを持つ。    
+modelのインスタンスのイベントを監視する。  
+UIを描画する。  
+ユーザのアクションを受け取り、イベントを発火する。  
 
 ### Controllerとは  
 modelとviewのインスタンスを持つ。  
