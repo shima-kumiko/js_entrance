@@ -6,11 +6,11 @@ JavaScript フレームワーク
 
 # 必要なもの - 
 
-http://backbonejs.org/#
-https://github.com/jashkenas/backbone
+http://backbonejs.org/#  
+https://github.com/jashkenas/backbone  
 
-http://underscorejs.org/
-https://github.com/jashkenas/underscore
+http://underscorejs.org/  
+https://github.com/jashkenas/underscore  
 
 
 # 見ておくところ -
