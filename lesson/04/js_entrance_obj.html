@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>オブジェクトについて | js_entrance</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  //オブジェクトについて
+  /*
+  オブジェクトとは、単にデータ型としてのユーザー定義の連想配列を指すものではない
+
+  一つのオブジェクトはプロパティとメソッドが含まれており
+  プロパティはそのオブジェクトの特性等の情報で、
+  メソッドはそのオブジェクトを操作するツールになる。
+  この特性から様々なデータを操作する機能を持たせた高機能な入れ物としてオブジェクトをつくることができ、
+
+  JSでオブジェクトをといった場合は、広くはこういった意味となる
+  */
+  var Animal = {
+      name : "タカ",//プロパティ
+      isName : function() {//関数が入ったプロパティをメソッド
+          this.name = "へび";
+      }
+  };
+
+  //console.log(Animal.name);
+  Animal.isName();
+  //console.log(Animal.name);
+
+  //組み込みオブジェクトについて
+  /*
+  JSにあらかじめ用意されたオブジェクトのことを「組み込みオブジェクト」という
+  */
+
+  //Stringオブジェクト の メソッド
+  var txt = "JSが難しくて困っちゃう";
+  //console.log(txt.indexOf("難し"));
+  //console.log(txt.charAt(7));
+
+  //Numberオブジェクト の メソッド
+  var nam = 100.504060;
+  //console.log(nam);
+  //console.log(nam.toString(16));
+  //console.log(nam.toFixed(3));
+  //console.log(nam.toPrecision(3));
+
+  //Mathオブジェクト の メソッド
+  //console.log(Math.floor(nam));
+  //console.log(Math.max(nam,200));
+  //console.log(Math.min(nam,200));
+  //console.log(Math.random());
+
+  //Arrayオブジェクト の メソッド
+  var ary1 = [101,102,103,104,105],
+      ary2 = [201,202,203,200];
+  //console.log(ary1.concat(ary2));
+  //console.log(ary1.join("/"));
+  //console.log(ary1.slice(0,3));
+  //console.log(ary1.splice(0,3,"301","302","303"), ary1);
+  //console.log(ary1.pop(), ary1);
+  //console.log(ary1.push("106"), ary1);
+  //console.log(ary1.shift(), ary1);
+  //console.log(ary1.unshift("100"), ary1);
+  //console.log(ary2.sort());
+  //console.log(ary2.reverse());
+  //console.log(ary2.length);
+  //console.log(ary2.toString());
+
+  //Dateオブジェクト
+  //RegExpオブジェクト
+  //Objectオブジェクト
+  //Glovalオブジェクト
+
+</script>
+</body>
+</html>

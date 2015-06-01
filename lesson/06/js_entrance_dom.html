@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>DOMついて | js_entrance</title>
+</head>
+
+<body>
+  <!--HTML start-->
+  <h1 id="JSH1">
+    H1-title
+  </h1>
+
+  <h2 class="JSel">
+    H2-title
+  </h2>
+
+  <div>
+    div-el
+    <p class="JSel">P-el</p>
+    <a href="http://google.com" class="JSel">a-el</a>
+    <ul>
+      ul-el
+      <li class="JSliFirst"><span>span-el</span>li-el1<em>em-el</em></li><li class="JSliSecond"><span>span-el</span>li-el2<em>em-el</em></li>
+    </ul>
+  </div>
+  <!--HTML end-->
+
+  <script type="text/javascript">
+
+    //DOM = Document Object Model
+    console.log("■ window、document を取得：");
+    console.log(window);
+    console.log(window.document);
+
+    //DOMの各要素（ノード）にアクセスする
+    //getElementById()...IDでノードを取得する
+    var IdEl = document.getElementById("JSH1");
+    console.log("■ getElementById 使用：");
+    console.log(IdEl);
+
+    //getElementsByClassName()...Classでノードを取得する
+    var ClassEl = document.getElementsByClassName("JSel");
+    console.log("■ getElementsByClassName 使用：");
+    console.log(ClassEl);
+
+    //getElementsByTagName()...Classでノードを取得する
+    var TagEl = document.getElementsByTagName("a");
+    console.log("■ getElementsByTagName 使用：");
+    console.log(TagEl);
+
+    //セレクタについて querySelector／querySelectorAll...セレクタAPIを使って要素を取得する
+    var SelecterAllEl = document.querySelectorAll("div .JSel");
+    console.log("■ querySelectorAll 使用：");
+    console.log(SelecterAllEl);
+
+    var SelecterEl = document.querySelector("div .JSel");
+    console.log("■ querySelector 使用：");
+    console.log(SelecterEl);
+
+    //その他
+    //parentNode
+    var parentEl = document.querySelector("a").parentNode;
+    console.log("■ querySelector と parentNode 使用：");
+    console.log(parentEl);
+
+    //previousSibling
+    var previousEl = document.querySelector(".JSliSecond").previousSibling;
+    console.log("■ querySelector と previousSibling 使用：");
+    console.log(previousEl);
+    
+    //nextSibling
+    var nextSiblingEl = document.querySelector(".JSliFirst").nextSibling;
+    console.log("■ querySelector と nextSibling 使用：");
+    console.log(nextSiblingEl);
+
+    //firstChild
+    var firstChildEl = document.querySelector(".JSliSecond").firstChild;
+    console.log("■ querySelector と firstChild 使用：");
+    console.log(firstChildEl);
+
+    //lastChild
+    var lastChildEl = document.querySelector(".JSliSecond").lastChild;
+    console.log("■ querySelector と lastChild 使用：");
+    console.log(lastChildEl);
+
+    //childNodes
+    var childNodesEl = document.querySelector(".JSliSecond").childNodes;
+    console.log("■ querySelector と childNodes 使用：");
+    console.log(childNodesEl);
+
+  </script>
+
+</body>
+
+</html>

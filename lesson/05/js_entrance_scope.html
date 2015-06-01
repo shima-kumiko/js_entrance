@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>変数のスコープについて | js_entrance</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  //関数について2
+  /*
+  スコープ...グローバル変数とローカル変数について
+  */
+
+  //グローバル変数とローカル変数について
+  var scope01 = 100;//グローバル変数
+  function getValue01() {
+    var scope01 = 1;//ローカル変数
+    console.log("関数内でscope01を参照 " + scope01);
+  };
+  //getValue01();
+  //console.log("関数外でscope01を参照 " + scope01);
+
+  //変数宣言のvar命令について
+  scope02 = 200;//グローバル変数
+  function getValue02() {
+    scope02 = 2;//var命令がないとグローバル変数になる
+    console.log("関数内でscope02を参照 " + scope02);
+  };
+  //getValue02();
+  //console.log("関数外でscope02を参照 " + scope02);
+
+  //ローカル変数の有効範囲
+  //console.log("関数前でscope03を参照 " + scope03);
+  function getValue03() {
+    console.log("var命令前でscope03を参照 " + scope03);
+    var scope03 = 3;//ローカル変数になる
+    console.log("var命令後でscope03を参照 " + scope03);
+  };
+  //getValue03();
+
+</script>
+</body>
+</html>

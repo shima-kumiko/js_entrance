@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JSの書き方 | js_entrance</title>
+</head>
+<body>
+  <script>
+
+    //一行コメント
+    /*
+      複数行コメント
+      複数行コメント
+      複数行コメント
+    */
+
+    //コンソールに文字列を出す
+    //処理の終わりにはセミコロン「；」が必要
+    console.log("hellow");
+
+    //複数の処理を連結させる場合はカンマ「,」を付けて続けて書く
+    console.log("よ"),console.log("こ"),console.log("た");
+
+    /*
+      JSで扱えるデータ型
+      文字列型
+      数値型
+      真偽型
+      特殊型（null・undefined）
+      配列型
+      オブジェクト型
+      関数型
+    */
+
+    //変数をつかってみる
+    /*
+    変数は「variable ＝ 入れ物」。様々なデータ型を入れておける
+    変数を使う場合は「var」で予め宣言すること
+    */
+    
+    //変数に文字列型を入れる
+    //""もしくは''で囲われると文字列型として扱われる
+    var txt = "variable";
+    console.log(txt);
+
+    //文字列についての注意
+    //文字列の中で「”」を使いたい
+    var name = "yo\"kota";
+    console.log(name);
+
+    //文字列の中で改行を使いたい
+    var breakline = '改\n行';
+    console.log(breakline);
+
+    //文字列の立ち振る舞い色々
+    var g = "1" + "1",
+        h = "1 + 1",
+        i = "1" + 1;
+    console.log(g);
+    console.log(h);
+    console.log(i);
+
+    //変数に数値型を入れる
+    //数値型は四則演算子（+=*/%で計算）で計算できる
+    var a = 1 + 1,
+        b = 1 - 1,
+        c = 2 * 2,
+        d = 9 / 3,
+        e = 11 % 6,
+        nmb;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+    //数値型の入った変数同士の計算もできる
+    nmb = a + b;
+    console.log(nmb);
+
+    //こんな演算子もあります
+
+    //単項演算子 ++ -- ： 1プラス、もしくは1マイナスする
+    var f = 10;
+    f++;
+    console.log(f);
+
+    //ほかにもたくさんの演算子があるので、それは別の機会に
+
+    //特殊型（null・undefined）も変数として扱える
+    var z;
+    console.log(z);
+
+    //配列型、オブジェクト型、関数型はまた別の機会で
+
+  </script>
+</body>
+</html>

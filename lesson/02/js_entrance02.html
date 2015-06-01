@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>判定処理 | js_entrance</title>
+</head>
+<body>
+  <script>
+
+    //if文
+    var score = 90;
+
+    if (score > 80) {
+        console.log("good");
+    } else if (score > 30 && score < 80 ) {
+        console.log("soso");
+    } else if (score === 20 ) {
+        console.log("20Pt");
+    } else {
+        console.log("bad");
+    }
+
+    /*
+    比較演算子
+        <
+        >
+        <=
+        >=
+        ===
+        !==
+    */
+
+    /*
+    真偽値
+        文字列型：空文字列以外だったら true
+        数値型：0かNaN以外だったら true
+        配列型、オブジェクト型：null,undefined以外だったら true
+    */
+
+    //三項演算子
+
+    var a = 1,
+        b = 1;
+
+    if (a === b) {
+        a = "aとbは同じ値";
+    } else {
+        a = "aとBは同じ値じゃない";
+    }
+
+    //上のif文を三項演算子で書くと以下のようになります
+    // a = (a === b) ? "aとbは同じ値!" : "aとBは同じ値じゃない!";
+    /*
+        三項演算子での判定文はコンパクトに書ける反面、
+        読みにくい分かりにくい面があります。
+        プロジェクトの方針によっては
+        使用を禁止するところも多いです。
+    */
+
+    console.log(a);
+
+    //swich文
+
+    var color = "black";
+    switch (color) {
+        case "red":
+            color = "赤";
+            break;
+        case "yellow":
+            color = "赤";
+            break;
+        default:
+            color = "わかりません";
+            break;
+    }
+    console.log(color);
+
+
+  </script>
+</body>
+</html>

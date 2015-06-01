@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>ループ処理 | js_entrance</title>
+</head>
+<body>
+  <script>
+
+  //ループ処理
+  //while文
+
+  var a = 0;
+
+  while (a < 10) {
+    console.log(a);
+    a++;
+    if  (a === 5) {
+        break;
+    };
+  };
+
+  //do..while文
+
+  var b = 0;
+
+  do {
+    if  (b === -5) {
+        break;
+    };
+    console.log(b);
+    b--;
+  } while (b > -10);
+
+  //for文
+
+  for (var c = 100; c < 110; c++) {
+    if  (c === 105) {
+        continue;
+    };
+    if  (c === 109) {
+        break;
+    };
+    console.log(c);
+  };
+
+  </script>
+</body>
+</html>

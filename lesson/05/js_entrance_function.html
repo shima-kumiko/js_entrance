@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>関数について | js_entrance</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  //関数について
+  /*
+    一定の処理をまとめたもの
+
+    function命令
+    function 任意関数名(引数1,引数2,...最大引数32766 or 最大引数65532) {
+      処理; 
+    };
+    任意関数名(引数);
+
+    functionリテラル
+    var 任意変数名 = function (引数1,引数2,...最大引数32766 or 最大引数65532) {
+      処理;
+    };
+
+    functionコンストラクタ
+    var 任意変数名 = new Function ('引数1','引数2','...最大引数32766 or 最大引数65532','処理)';
+
+    即時関数
+    (function(引数1,引数2,...) {
+      処理;
+    })(引数);
+
+  */
+
+  //function命令
+  function hellow01(name) {
+    console.log("あいさつ関数命令結果 " + "hellow " + name);
+  };
+  //hellow01("横田");
+
+  //functionリテラル(匿名関数・無名関数ともいう)
+  var hellow02 = function (name) {
+    console.log("あいさつ関数リテラル結果 " + "hellow " + name);
+  };
+  //hellow02("神津");
+
+  //functionコンストラクタ
+  var hellow03 = new Function ('name','console.log("あいさつ関数コンストラクタ結果 " + "hellow " + name);');
+  //hellow03("寺内");
+
+  //即時関数
+  /*
+  (function (name) {
+    console.log("あいさつ即時関数命令結果 " + "hellow " + name);
+  })("野崎");
+  */
+
+  //return...値自体を呼び出し元に返す
+  function hellow04(name) {
+    return "hellow " + name;
+  };
+  //console.log("あいさつ関数return結果 " + hellow04("露木"));
+
+  //関数に関する4つの注意点
+  //return文は改行しない
+  function hellow05(name) {
+    return
+    "hellow " + name;
+  };
+  //console.log("あいさつ関数return結果 " + hellow05("佐々木"));
+
+  //関数はデータ型の一種
+  function hellow06(name) {
+    return "hellow " + name;
+  };
+  var hellowTxt06 = hellow06("山田"),
+      hellowTxt06 = 4649;
+  //console.log("関数リテラルを数値リテラルに置き換えた結果 " + hellowTxt06);
+
+  //function命令の評価はコード解析時にすでに行われている
+  //console.log("function命令文前で関数を実行した結果 " + hellow07("横田"));
+  function hellow07(name) {
+    return "hellow " + name;
+  };
+
+  //functionリテラル、functionコンストラクタの評価は関数実行時に評価される
+  //console.log("functionリテラル宣言前で関数を実行した結果 " + hellow08("横田"));
+  var hellow08 = function (name) {
+    console.log("あいさつ関数リテラル結果 " + "hellow " + name);
+  };
+
+
+</script>
+</body>
+</html>

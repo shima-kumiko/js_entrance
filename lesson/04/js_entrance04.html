@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>配列、オブジェクト | js_entrance</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  //配列型について
+  /*
+  配列は複数のデータを連結したものです。
+  配列はブラケット「[]」で囲い、データをカンマ「,」で区切って書きます
+  */
+  var ary1 = [1,2,3];
+  console.log(ary1);
+
+  /*
+  配列内のデータはインデックス番号（0~）が振られて行きます
+  配列内の各データにはこのインデックス番号で直接アクセスできます
+  */
+  console.log(ary1[0] + "&" + ary1[2]);
+
+  /*
+  配列内のデータを入れ子にすることも可能です。
+  入れ子内の各データにもアクセスできます
+  */
+  var ary2 = [
+        [
+          "壱-壱",
+          "壱-弐",
+          "壱-参"
+        ],
+        [
+          "弐-壱",
+          "弐-弐",
+          "弐-参",
+            [
+              "弐-四-壱",
+              "弐-四-弐"
+            ],
+            [
+              "弐-五-壱",
+              "弐-五-弐"
+            ]
+        ]
+        ,"参"
+      ];
+  console.log(ary2);
+  console.log(ary2[1][1],ary2[1][4][0]);
+
+  //オブジェクト型について
+  /*
+  配列はインデックス番号でしかアクセスできませんが
+  オブジェクトは任意の文字列と紐付けて各データにアクセスできます
+  */
+  var obj1 = {
+        name  : "虎",
+        species : "mammals",
+        food : "肉"
+      };
+  console.log(obj1);
+
+  /*
+  オブジェクト内の各データはプロパティと呼ばれます。
+  各プロパティへのアクセスはドッド「.」を使用するか、ブラケット「[]」を使います
+  */
+
+  console.log(obj1.name);
+  console.log(obj1['food']);
+
+  /*
+  オブジェクト内での入れ子や、プロパティに文字列や真偽値を設定することも可能です
+  */
+  var obj2 =
+        {
+          nama  : "横田 明日朗",
+          age   : 38,
+          family: {//入れ子にしちゃう
+            count: 3,
+            Relationship:["父","母","兄"], //配列
+            liveTogether: false //真偽値
+          },
+          sex   : "男"
+        };
+  console.log(obj2);
+  console.log(obj2.family.Relationship[1]);
+
+  /*
+  複数のオブジェクトを配列にする
+  */
+  var obj3 = [
+        {
+          nama  : "横田 明日朗",
+          age   : 38,
+          family: {//入れ子にしちゃう
+            count: 3,
+            Relationship:["父","母","兄"], //配列
+            liveTogether: false //真偽値
+          },
+          sex   : "男"
+        },
+        {
+          nama  : "山田 明日朗",
+          age   : 3,
+          family: {//入れ子にしちゃう
+            count: 1,
+            Relationship:["父"], //配列
+            liveTogether: true //真偽値
+          },
+          sex   : "男"
+        },
+        {
+          nama  : "森田 明日朗",
+          age   : 88,
+          family: {//入れ子にしちゃう
+            count: 2,
+            Relationship:["妻","長男"], //配列
+            liveTogether: true //真偽値
+          },
+          sex   : "男"
+        }
+      ];
+  console.log(obj3);
+  /*
+  配列とオブジェクトのアクセス方法を組み合わせれば、どんなオブジェクトのプロパティにもアクセスできます
+  if文やfor文と組み合わせることで複雑な処理もかくことができます
+  */
+  for (var i = 0; i < obj3.length; i++) {
+    console.log(obj3[i].nama,obj3[i].age,obj3[i].sex);
+    if (obj3[i].family.liveTogether) {
+      console.log(obj3[i].nama + "さんは家族と一緒に住んでます");
+    } else {
+      console.log(obj3[i].nama + "さんは家族と離れて暮らしています");
+    };
+  };
+
+</script>
+</body>
+</html>

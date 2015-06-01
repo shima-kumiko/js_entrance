@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>参照型についての注意点 | js_entrance</title>
+</head>
+<body>
+<script type="text/javascript">
+
+  //オブジェクト型について
+  /*
+    参照型の値の変更の注意点と、インスタンス化について
+  */
+
+  /*
+    基本型リテラルは変数に代入される場合自動的にインスタンス化されるので
+    同じデータを別々の変数に代入しても、別々に変更できる
+  */
+
+  var nam = 1,
+      namA = nam,
+      namB = nam;
+
+  namA = nam + 999;
+
+  //console.log(namB);
+
+  /*
+    参照型リテラルは変数に直接代入されるわけではなく
+    そのデータのメモリ上のアドレスが代入される
+    同じデータを別々の変数に代入した後も
+    それぞれの変数を変更すると同じデータが変更されてしまう
+  */
+  var profile = {
+          name : "横田",
+          gender : "男性"
+      },
+      profiledDataA = profile,
+      profiledDataB = profile;
+
+  profiledDataA.name = "神津";
+
+  //console.log(profiledDataB.name);
+
+  /*
+    参照型リテラルの値の変更を安全に行うために
+    インスタンス化を明示的に行う必要があります。
+    インスタンスにはnew演算子を使います
+  */
+  var Animal = function(name,gender) {
+        this.name = name,
+        this.gender = gender;
+      },
+      Animal1 = new Animal("虎","オス"),
+      Animal2 = new Animal("ライオン","メス");
+
+  Animal1.name = "スズメ";
+
+  //console.log(Animal1.name);
+
+</script>
+</body>
+</html>
