@@ -1,4 +1,5 @@
-[メンバー一覧用のmember.hbs]
+[メンバー一覧用のmember.hbs]  
+  
 `<ul>` 
 `  {{#each list}}`  
 `    <li>{{name}}</li>`  
