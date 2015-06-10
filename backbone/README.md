@@ -21,6 +21,17 @@ http://dotinstall.com/lessons/basic_backbonejs　　
 Underscore.js入門 (全10回)  
 http://dotinstall.com/lessons/basic_underscorejs  
 
+
+
+## 関係ありそうな便利なものたち -
+
+・zepto.js => DOM操作とか。 jQueryみたいなやつ。  
+・underscore.js => 便利関数群。生jsで書くのめんどいなーって処理を簡潔に記述できる。  
+・require.js => jsファイルをモジュール管理できる。要は、細かくjsファイルを作れるようになる。  
+・handlebars.js => テンプレートエンジン。動的にHTMLを生成できる。jadeみたいなもん。  
+・bucks.js => 非同期ライブラリ。コールバック地獄から抜け出すために必要。  
+
+
 ## MVCとは  
 
 ### modelとは  
