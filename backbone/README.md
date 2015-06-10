@@ -1,7 +1,7 @@
 # backbone.jsとは - 
 
 JavaScript フレームワーク  
-クライアントサイドの実装を、MVC（model,view,controller)を利用して行うための下地　　
+クライアントサイドの実装を、MVC（model,view,Collection)を利用して行うための下地　　
 
 
 ## 必要なもの - 
