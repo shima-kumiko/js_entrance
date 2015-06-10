@@ -34,19 +34,19 @@ alert(userData.name + ‘さんが’ + loginbonusData.date + ‘日目のログ
     
 // 1. mypageのデータを取得する  
 $.ajax({ url: ‘/_/mypage’, success: function (data) {  
-  // 2. 取得したデータを元に、必要な情報を抜き出す
-  var userId = data.userId;  
-  var loginbonusId = data.loginbonusId;  
-  // 3. userデータとloginbonusデータを取得する  
-  $.ajax({ url: ‘/_/user’, data: { id: userId }, success: function (userData) {  
+ // 2. 取得したデータを元に、必要な情報を抜き出す
+ var userId = data.userId;  
+ var loginbonusId = data.loginbonusId;  
+ // 3. userデータとloginbonusデータを取得する  
+ $.ajax({ url: ‘/_/user’, data: { id: userId }, success: function (userData) {  
   userName = userData.name;  
   showResult();  
-  } });  
-  $.ajax({ url: ‘/_/loginbonus’, data: { id: loginbonusId }, success: function (loginbonusData) {  
-    loginbonusDate = loginbonusData.date;  
+ } });  
+ $.ajax({ url: ‘/_/loginbonus’, data: { id: loginbonusId }, success: function (loginbonusData) {  
+   loginbonusDate = loginbonusData.date;  
    showResult();  
   } });  
-  }  
+ }  
 });  
   
 // 4. 結果を表示する  
