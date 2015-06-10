@@ -48,7 +48,7 @@ UIを描画する。
 modelとviewのインスタンスを持つ。  
 viewのイベントを監視する。  
   
-※backboneにはcontroller自体はないよ 
+※backboneにはcontroller自体はないよ   
 Backbone.RouterとBackbone.Historyがそれっぽい役割をしてる・・
 
 
