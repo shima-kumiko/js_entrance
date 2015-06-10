@@ -1,10 +1,10 @@
 [メンバー一覧用のmember.hbs]  
   
-`<ul>` 
-`  {{#each list}}`  
-`    <li>{{name}}</li>`  
-`  {{/each}}` 
-`</ul>`
+`<ul>`     
+`  {{#each list}}`    
+`    <li>{{name}}</li>`    
+`  {{/each}}`  
+`</ul>`  
   
 ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    
   
@@ -18,12 +18,12 @@ $(‘#listWrapper’).html(memberList); // DOMにぶち込む
 
 こーなる  
 
-`<div id=”listWrapper”>` 
-`  <ul>`
-`    <li>aaa</li>` 
-`    <li>bbb</li>` 
-`    <li>ccc</li>` 
-`    <li>ddd</li>`
-`  </ul>`
+`<div id=”listWrapper”>`   
+`  <ul>`  
+`    <li>aaa</li>`   
+`    <li>bbb</li>`  
+`    <li>ccc</li>`  
+`    <li>ddd</li>`  
+`  </ul>`  
 `</div>`
 
