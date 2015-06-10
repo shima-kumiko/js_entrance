@@ -1,4 +1,6 @@
-[メンバー一覧用のmember.hbs]  
+##handlebarsの使い方例
+
+[リストを使いたい何か member.hbs]  
   
 `<ul>`     
 `  {{#each list}}`    
