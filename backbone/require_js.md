@@ -24,7 +24,7 @@ http://requirejs.org/
         });
 
   
-  
+---
   
         core/component/aaa.js  
             
