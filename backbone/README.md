@@ -1,7 +1,7 @@
 # backbone.jsとは - 
 
 JavaScript フレームワーク  
-クライアントサイドの実装を、MVC（model,view,Collection)を利用して行うための下地　　
+クライアントサイドの実装を、MVCを利用して行うための下地　　
 
 
 ## 必要なもの - 
@@ -46,7 +46,11 @@ UIを描画する。
 
 ### Controllerとは  
 modelとviewのインスタンスを持つ。  
-viewのイベントを監視する。
+viewのイベントを監視する。  
+  
+※backboneにはcontroller自体はないよ 
+Backbone.RouterとBackbone.Historyがそれっぽい役割をしてる・・
+
 
 
 
