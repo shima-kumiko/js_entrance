@@ -11,11 +11,11 @@
   
 ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓    
   
-var templateMemberList = require(‘member.hbsc’); // テンプレートを読み込む  
-var memberList = templateMemberList({ // テンプレートにデータを渡す  
-  list: [ { name: ‘aaa’ }, { name: ‘bbb’ }, { name: ‘ccc’ }, { name: ‘ddd’ } ]  
-});  
-$(‘#listWrapper’).html(memberList); // DOMにぶち込む    
+        var templateMemberList = require(‘member.hbsc’); // テンプレートを読み込む  
+        var memberList = templateMemberList({ // テンプレートにデータを渡す  
+          list: [ { name: ‘aaa’ }, { name: ‘bbb’ }, { name: ‘ccc’ }, { name: ‘ddd’ } ]  
+        });  
+        $(‘#listWrapper’).html(memberList); // DOMにぶち込む    
   
 ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓  
 
